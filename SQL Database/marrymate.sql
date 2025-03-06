@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2025 at 04:59 AM
+-- Generation Time: Mar 06, 2025 at 05:07 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -276,11 +276,19 @@ CREATE TABLE `reviews` (
   `user_id` bigint(20) UNSIGNED DEFAULT NULL,
   `vendor_id` bigint(20) UNSIGNED DEFAULT NULL,
   `em_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `rating` int(11) NOT NULL,
+  `rating` decimal(10,2) NOT NULL,
   `review` varchar(1000) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`review_id`, `user_id`, `vendor_id`, `em_id`, `rating`, `review`, `created_at`, `updated_at`) VALUES
+(1, NULL, 2, NULL, 3.50, 'testing message', '2025-03-06 04:00:41', '2025-03-06 04:00:41'),
+(2, 7, 3, NULL, 4.00, 'This is testing message', '2025-03-06 04:01:51', '2025-03-06 04:01:51');
 
 -- --------------------------------------------------------
 
@@ -602,7 +610,7 @@ ALTER TABLE `pre_packages`
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `review_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `review_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `services`
