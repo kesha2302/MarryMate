@@ -103,14 +103,15 @@
                   <span class="hide-menu">View Custom Package</span>
                 </a>
               </li>
-            {{--   <li class="sidebar-item">
-                <a class="sidebar-link" href="{{url('/Admincontact')}}" aria-expanded="false">
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="{{url('/ClientsReview')}}" aria-expanded="false">
                   <span>
                     <i class="ti ti-phone"></i>
                   </span>
-                  <span class="hide-menu">Contact Details</span>
+                  <span class="hide-menu">Clients Review</span>
                 </a>
               </li>
+            {{--
               <li class="sidebar-item">
                 <a class="sidebar-link" href="{{url('/Admincategory')}}" aria-expanded="false">
                   <span>
